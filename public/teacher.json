@@ -1,0 +1,66 @@
+[
+  {
+    "img": "../src/teachers/shamsul_alam_sir.jpg",
+    "name": "Engr. Shamsul Alam",
+    "designation": "Chief Instructor (Computer)",
+    "education": " M.Sc in Engg.(CSE)",
+    "phone": "01711577545",
+    "email": "ci_sareal@yahoo.com"
+  },
+  {
+    "img": "../src/teachers/santosh_sir.jpg",
+    "name": "Santosh Kumar Karmaker",
+    "designation": "Chief Instructor (Computer)",
+    "education": "B. Sc in Engr CSE",
+    "phone": "01714518188",
+    "email": " santoshkarmaker33@gmail.com"
+  },
+  {
+    "img": "../src/teachers/Nixon_sir.jpg",
+    "name": "S.M Abdullah Al Shuaeb",
+    "designation": "Instructor (Computer)",
+    "education": "B.Sc in CSE, MS in CS)",
+    "phone": " 0176090119",
+    "email": "nixon.cse28@gmail.com"
+  },
+  {
+    "img": "../src/teachers/rezaul_sir.jpg",
+    "name": "Rezaul Karim",
+    "designation": "Instructor (Computer)",
+    "education": "B.Sc(Engineering) in CSE",
+    "phone": "01705432297",
+    "email": " karimmpi1985@gmail.com"
+  },
+  {
+    "img": "../src/teachers/jannat_mam.jpg",
+    "name": "Jannatul Ferdousi",
+    "designation": "Junior Instructor (Computer)",
+    "education": " B.Sc Engineering( CSE)",
+    "phone": "01772058305",
+    "email": " jannatduet@yahoo.com"
+  },
+  {
+    "img": "../src/teachers/kader_sir.jpeg",
+    "name": "Hafez Md. Abdul Kader",
+    "designation": " Instructor (Computer)",
+    "education": " M.Sc( Enginering) CSE",
+    "phone": "01719928026",
+    "email": "kader1284@gmail.com"
+  },
+  {
+    "img": "../src/teachers/fazlu_sir.jpg",
+    "name": "Md. Fazlul Haque",
+    "designation": "Instructor (Computer)",
+    "education": "B.Sc in CSE",
+    "phone": "01777816232",
+    "email": "fhaque.mpi@gmail.com"
+  },
+  {
+    "img": "../src/teachers/saif_sir.jpg",
+    "name": "Md Saiful Islam",
+    "designation": "Instructor (Computer)",
+    "education": "B.Sc in Tech EEE",
+    "phone": "01716556071",
+    "email": "saifulbarabi@gmail.com"
+  }
+]
