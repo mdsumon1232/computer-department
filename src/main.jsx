@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Login from "./Components/Login/Login";
 import Primary from "./Components/Primary/Primary.jsx";
 import Register from "./Components/Register/Register";
+import AllTeachers from "./Pages/AllTeachers/AllTeachers.jsx";
 import Home from "./Pages/Home/Home.jsx";
 import "./index.css";
 
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/all/teachers",
+        element: <AllTeachers />,
+        loader: () => fetch("/public/teacher.json"),
       },
     ],
   },
