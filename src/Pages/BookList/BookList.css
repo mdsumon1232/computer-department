@@ -1,0 +1,41 @@
+.bookContainer {
+  max-width: 1920px;
+  margin: 30px auto;
+}
+
+.bookContainer h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.bookCartGroup {
+  margin-top: 50px;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+  .bookCartGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .bookCartGroup {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .bookCartGroup {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

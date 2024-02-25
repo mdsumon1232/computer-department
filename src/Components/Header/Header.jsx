@@ -25,6 +25,9 @@ const Header = () => {
             <Link to="/admission/guide">Admissions Guide</Link>
           </li>
           <li>
+            <Link to="/book/list">Book List</Link>
+          </li>
+          <li>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>

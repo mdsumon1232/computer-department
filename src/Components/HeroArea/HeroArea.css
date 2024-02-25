@@ -17,17 +17,21 @@
 .hero-text {
   width: 80%;
   padding: 20px 0;
-  color: white;
   z-index: 100;
 }
 
-.text h1 {
+.hero-text h1 {
   font-size: 4rem;
-  line-height: 80px;
+  font-weight: 700;
+  line-height: 5rem;
+  color: white;
+  margin-bottom: 10px;
 }
-.text h2 {
+.hero-text h2 {
   font-size: 3rem;
   padding: 10px 0;
+  color: #0c359e;
+  font-weight: 600;
 }
 
 .heroImage {
@@ -43,9 +47,121 @@
   height: 100%;
   background: linear-gradient(
     120deg,
-    rgba(0, 0, 0, 0.877),
+    rgba(12, 53, 158, 0.555),
     rgba(59, 59, 59, 0.514)
   );
   position: absolute;
   top: 0;
+}
+
+/* responsive for */
+
+@media screen and (max-width: 576px) {
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+  .heroImage {
+    flex-basis: 100%;
+    position: relative;
+    z-index: -999;
+  }
+
+  .blank {
+    background: linear-gradient(
+      120deg,
+      rgba(12, 53, 158, 0.829),
+      rgb(59, 59, 59)
+    );
+  }
+  .text {
+    flex-basis: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .hero-container {
+    flex-direction: column-reverse;
+  }
+  .heroImage {
+    flex-basis: 100%;
+    position: relative;
+    z-index: -999;
+  }
+
+  .blank {
+    background: linear-gradient(
+      120deg,
+      rgba(12, 53, 158, 0.829),
+      rgb(59, 59, 59)
+    );
+  }
+  .text {
+    flex-basis: 100%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 4rem;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .hero-text h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+  .hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1599px) {
+  .hero-text {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+  }
+  .hero-text h2 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
 }

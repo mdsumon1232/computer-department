@@ -23,15 +23,7 @@ const CMTIntroduce = () => {
           amet consectetur, adipisicing elit. Minus, iste soluta error, sit
           provident delectus nemo aspernatur quo ipsa dolore officiis sequi
           voluptatem ratione. Itaque, quos! Ex deserunt ea incidunt! Lorem ipsum
-          dolor sit amet consectetur, adipisicing elit. Minus, iste soluta
-          error, sit provident delectus nemo aspernatur quo ipsa dolore officiis
-          sequi voluptatem ratione. Itaque, quos! Ex deserunt ea incidunt! Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Minus, iste soluta
-          error, sit provident delectus nemo aspernatur quo ipsa dolore officiis
-          sequi voluptatem ratione. Itaque, quos! Ex deserunt ea incidunt! Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Minus, iste soluta
-          error, sit provident delectus nemo aspernatur quo ipsa dolore officiis
-          sequi voluptatem ratione. Itaque, quos! Ex deserunt ea incidunt!
+          dolor sit amet consectetur, adipisicing elit.
         </p>
       </article>
       <div className="cmt-img">

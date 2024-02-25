@@ -2,17 +2,30 @@
   max-width: 1600px;
   width: 100%;
   margin: 20px auto;
-  padding: 50px 0;
+  padding: 50px 30px;
+  background-color: #0c359e;
   text-align: center;
+  border-radius: 10px;
 }
 
 .mission-title {
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 600;
-  height: 50px;
+  height: 4rem;
+  color: #ffffff;
 }
 
 .mission-article {
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #ffffff;
+}
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+  .mission-container {
+    border-radius: 2px;
+    text-align: left;
+  }
 }

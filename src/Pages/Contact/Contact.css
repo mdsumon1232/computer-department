@@ -1,0 +1,43 @@
+.form-container {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(12, 53, 157, 0.747),
+      rgba(0, 0, 0, 0.904)
+    ),
+    url("../../assets/contact-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactForm {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.ContactForm label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ContactForm input {
+  margin-bottom: 10px;
+  width: 40%;
+  height: 40px;
+}
+.contact-title {
+  font-size: 2rem;
+  font-weight: 6000;
+  line-height: 4rem;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 40px;
+}

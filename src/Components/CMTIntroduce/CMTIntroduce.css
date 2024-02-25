@@ -2,6 +2,7 @@
   max-width: 1600px;
   width: 100%;
   margin: 30px auto;
+  padding: 30px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,15 +13,17 @@
 }
 
 .intro-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 56px;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 4rem;
+  padding-bottom: 10px;
+  color: #0c359e;
 }
 
 .intro-article {
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: rgba(0, 0, 0, 0.671);
 }
 
 .cmt-img {
@@ -31,4 +34,108 @@
 .cmt-img img {
   width: 100%;
   height: 100%;
+}
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+  .intro-container {
+    flex-direction: column;
+  }
+  .article {
+    flex-basis: 100%;
+    padding: 0 10px;
+  }
+
+  .intro-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-article {
+    line-height: 1.5rem;
+  }
+
+  .cmt-img {
+    flex-basis: 100%;
+    height: 476px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+  }
+  .article {
+    flex-basis: 100%;
+    padding: 0 20px;
+  }
+
+  .intro-title {
+    font-size: 1.5rem;
+  }
+
+  .intro-article {
+    line-height: 1.5rem;
+  }
+
+  .cmt-img {
+    flex-basis: 100%;
+    height: 476px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .intro-container {
+    flex-direction: column;
+  }
+  .article {
+    flex-basis: 100%;
+    padding: 0 20px;
+  }
+
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-article {
+    line-height: 2rem;
+  }
+
+  .cmt-img {
+    flex-basis: 100%;
+    height: 476px;
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1599px) {
+  .intro-container {
+    padding: 0 10px;
+  }
+
+  .article {
+    height: 476px;
+    padding: 0 10px;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0c359e;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: gray;
+  }
+
+  .intro-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }

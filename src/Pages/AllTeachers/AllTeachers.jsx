@@ -8,7 +8,7 @@ const AllTeachers = () => {
   return (
     <div className="AllTeachersContainer">
       <h1 className="allTeacherTitle"> Our Teachers</h1>
-      <div className="card-group">
+      <div className="cart-group">
         {allTeachers.map((allteacher) => (
           <AllTeacher key={allteacher.id} allteacher={allteacher} />
         ))}

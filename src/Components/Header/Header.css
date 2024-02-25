@@ -1,12 +1,12 @@
 .header {
   max-width: 1920px;
   width: 100%;
-  height: 60px;
+  height: 80px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0px 30px;
   display: flex;
   align-items: center;
-  background-color: cornflowerblue;
+  background-color: #0c359e;
   justify-content: space-between;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .nav ul li {
-  margin: 0px 10px;
+  margin: 0px 15px;
   list-style: none;
 }
 
@@ -24,32 +24,35 @@
   text-decoration: none;
   font-size: 20px;
   font-weight: 500;
-  color: black;
+  color: #ffffff;
 }
 
 .user {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 200px;
   align-items: center;
 }
 
 .user a {
   font-size: 20px;
-  text-decoration: none;
   font-weight: 500;
+  margin-right: 15px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .barIcon {
   width: 30px;
   height: 30px;
   display: none;
+  color: #ffffff;
 }
+
+/* responsive for small device */
 
 @media screen and (max-width: 576px) {
   .header {
     padding: 0 10px;
+    position: relative;
   }
   .barIcon {
     display: block;
@@ -57,27 +60,44 @@
 
   .nav {
     position: absolute;
-    width: 400px;
-    top: 60px;
-    background-color: red;
+    width: 100%;
+    top: calc(100% - 2px);
+    background-color: #0c359e;
     right: 0;
+    z-index: 999;
   }
+
   .nav ul {
     flex-direction: column;
   }
   .nav ul li {
-    margin: 10px 0;
+    margin: 8px 0;
   }
   .open {
-    top: 60;
+    left: 0;
+    transition: left 1s;
   }
   .close {
-    top: -200px;
-    animation-duration: 1000;
+    left: -100%;
+    transition: left 1s;
   }
 
-  .user {
-    width: 150px;
+  .user a {
+    font-size: 16px;
+  }
+}
+
+/* responsive for medium device */
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+  .nav ul li {
+    margin: 0 10px;
+  }
+  .nav ul li a {
+    font-size: 16px;
   }
   .user a {
     font-size: 16px;

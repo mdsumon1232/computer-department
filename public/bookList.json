@@ -1,0 +1,95 @@
+[
+  {
+    "id": "1stbook",
+    "semester": "1st",
+    "books": [
+      "Engineering Drawing(21011)",
+      "Bangla-I(25711)",
+      "English-I(25712)",
+      " Mathematics -I(25911)",
+      " Physics -I(25912)",
+      " Computer Office Application(26611)",
+      "Basic Electricity (26711)"
+    ]
+  },
+  {
+    "id": "2ndbook",
+    "semester": "2nd",
+    "books": [
+      "Bangla -II(25721)",
+      "English-II(25722)",
+      "Physical Education & Life skills Development(25812)",
+      "Mathematics-II(25921)",
+      "Physics -II(25922)",
+      "Python Programming(26621)",
+      "Computer Graphics Design-I(26622)",
+      "Basic Electronics(26811)"
+    ]
+  },
+  {
+    "id": "3rdbooks",
+    "semester": "3rd",
+    "books": [
+      "Social Science(25811)",
+      "Chemistry(25913)",
+      "Mathematics-III(25931)",
+      "Application Development Using Python(26631)",
+      "Computer Graphics Design-II(26632)",
+      "IT Support Services(26633)",
+      "Digital Electronics-I(26831)"
+    ]
+  },
+  {
+    "id": "4thbooks",
+    "semester": "4th",
+    "books": [
+      "Business Communication(25831)",
+      "Java Programming(26641)",
+      "Data Structure & Algorithm(26642)",
+      "Computer Peripherals & Interfacing(26643)",
+      "Web Design & Development-I(26644)",
+      "Digital Electronics-II(26841)",
+      "Environmental Studies(29041)"
+    ]
+  },
+  {
+    "id": "5thbooks",
+    "semester": "5th",
+    "books": [
+      "Accounting(25841)",
+      "Application Development Using Java(26651)",
+      "Web Design & Development-II(26652)",
+      "Computer Architecture & Microprocessor(26653)",
+      "Data Communication(26654)",
+      "Operating System(26655)",
+      "Project Work-I(26656)"
+    ]
+  },
+  {
+    "id": "6thbooks",
+    "semester": "6th",
+    "books": [
+      "Principles of Marketing(25851)",
+      "Industrial Management(25852)",
+      "Database Management System(26661)",
+      "Computer Networking(26662)",
+      "Sensor & IoT System(26663)",
+      "Microcontroller Based System Design & Development(26664)",
+      "Surveillance Security System(26665)",
+      "Web Development Project(26666)"
+    ]
+  },
+  {
+    "id": "7thbooks",
+    "semester": "7th",
+    "books": [
+      "Innovation & Entrepreneurship(25853)",
+      "Digital Marketing Technique(26671)",
+      "Network Administration & Services(26672)",
+      "Cyber Security & Ethics(26673)",
+      "Apps Development Project(26674)",
+      "Multimedia & Animation(26675)",
+      "Project Work-II(26676)"
+    ]
+  }
+]
