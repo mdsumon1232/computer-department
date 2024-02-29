@@ -1,0 +1,29 @@
+.footerContainer {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 10px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.footerTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 3rem;
+  margin-bottom: 10px;
+}
+
+.footerContainer h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.footerContainer p {
+  margin: 10px 0;
+  font: 1rem;
+}

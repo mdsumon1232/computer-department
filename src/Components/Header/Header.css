@@ -40,6 +40,12 @@
   text-decoration: none;
 }
 
+.profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .barIcon {
   width: 30px;
   height: 30px;

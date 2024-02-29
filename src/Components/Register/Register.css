@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e2ebf0;
+  background-color: #e1f0da;
 }
 
 .register {
@@ -23,10 +23,12 @@
   margin: 0 auto;
 }
 
-.register-form h2 {
+.register-form h1 {
   text-align: center;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 3rem;
+  line-height: 5rem;
+  font-weight: 700;
+  color: #0c359e;
 }
 
 .register-form label {
@@ -49,20 +51,23 @@
   margin: 10px 0;
 }
 
-.login {
+.loginClick {
   font-style: italic;
   color: blue;
+  margin-left: 5px;
 }
 
-.loginBtn {
+.registerBtn {
   width: 50%;
   height: 40px;
   display: block;
   border: 0 solid;
   margin: 20px auto;
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
   border-radius: 5px;
-  background-color: #e8c468;
+  color: #000;
+  background-color: #ffa500;
 }
 
 .login-img {

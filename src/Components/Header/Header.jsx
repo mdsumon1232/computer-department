@@ -1,9 +1,14 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import profile from "../../assets/profile.png";
+import ActiveLink from "../ActiveLink/ActiveLink";
+import { AuthContext } from "../UserProvider/UserProvider";
 import "./Header.css";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
+
   const [open, setOpen] = useState(false);
   const handleNavbar = () => {
     setOpen(!open);
@@ -16,25 +21,34 @@ const Header = () => {
       <nav className={`nav ${open ? "open" : "close"}`}>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <ActiveLink to="/">Home</ActiveLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <ActiveLink to="/about">About</ActiveLink>
           </li>
           <li>
-            <Link to="/admission/guide">Admissions Guide</Link>
+            <ActiveLink to="/admission/guide">Admissions Guide</ActiveLink>
           </li>
           <li>
-            <Link to="/book/list">Book List</Link>
+            <ActiveLink to="/book/list">Book List</ActiveLink>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <ActiveLink to="/contact">Contact</ActiveLink>
           </li>
         </ul>
       </nav>
       <div className="user">
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
+        {user ? (
+          <img
+            src={user.photoURL ? user.profile : profile}
+            className="profile"
+          />
+        ) : (
+          <span>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </span>
+        )}
         <div onClick={handleNavbar}>
           {open ? (
             <XMarkIcon className="barIcon" />
