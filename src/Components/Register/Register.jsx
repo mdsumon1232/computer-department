@@ -1,26 +1,21 @@
-import { getAuth, sendEmailVerification, updateProfile } from "firebase/auth";
-import { getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { v4 } from "uuid";
-import app from "../../firebase/firebase.config";
 import { AuthContext } from "../UserProvider/UserProvider";
 import "./Register.css";
 
-const auth = getAuth();
-const storage = getStorage(app);
+// const storage = getStorage(app);
 
 const Register = () => {
-  const [profile, setProfile] = useState("");
-  const [photoUrl, setPhotoUrl] = useState("");
-  const handleProfileImage = (event) => {
-    const file = event.target.files[0];
-    setProfile(file);
-  };
-
   const { createUser } = useContext(AuthContext);
+  // const [profile, setProfile] = useState("");
+  // const [photoUrl, setPhotoUrl] = useState("");
+
+  // const handleProfileImage = (event) => {
+  //   const file = event.target.files[0];
+  //   setProfile(file);
+  // };
 
   const handleRegisterData = (event) => {
     event.preventDefault();
@@ -31,56 +26,54 @@ const Register = () => {
     const fullName = form.fullName.value;
     const password = form.password.value;
 
-    const imageRef = ref(storage, `images/ ${profile.name + v4()}`);
-    uploadBytes(imageRef, profile, {
-      contentType: "image/PNG",
-    }).then(() => {
-      getDownloadURL(imageRef)
-        .then((url) => {
-          setPhotoUrl(url);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    });
+    // const imageRef = ref(storage, `images/ ${profile.name + v4()}`);
+    // uploadBytes(imageRef, profile, {
+    //   contentType: "image/PNG",
+    // }).then(() => {
+    //   getDownloadURL(imageRef)
+    //     .then((url) => {
+    //       setPhotoUrl(url);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // });
 
     createUser(email, password)
       .then((userCredential) => {
-        console.log(userCredential.user);
         toast("Register successfully");
-        emailVerify(userCredential.user);
-        profileUpdate(userCredential.user, fullName, photoUrl);
+        console.log(userCredential.user);
+        // emailVerify(userCredential.user);
+        // profileUpdate(userCredential.user, fullName, photoUrl);
       })
       .catch((error) => {
         console.error(error);
       });
 
-    const emailVerify = (user) => {
-      sendEmailVerification(user)
-        .then((result) => {
-          console.log(result);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    };
+    // const emailVerify = (user) => {
+    //   sendEmailVerification(user)
+    //     .then((result) => {
+    //       console.log(result);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+    // };
   };
 
-  const profileUpdate = (user, name, photo) => {
-    updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: photo,
-    })
-      .then(() => {
-        console.log("update successfully");
-      })
+  // const profileUpdate = (user, name, photo) => {
+  //   updateProfile(auth.currentUser, {
+  //     displayName: name,
+  //     photoURL: photo,
+  //   })
+  //     .then(() => {
+  //       console.log("update successfully");
+  //     })
 
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
-  console.log(photoUrl);
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div className="register-container">
@@ -139,7 +132,7 @@ const Register = () => {
 
           <br />
           <br />
-          <input type="file" onChange={handleProfileImage} required />
+          <input type="file" />
 
           <br />
           <br />
@@ -154,7 +147,6 @@ const Register = () => {
           <ToastContainer />
         </form>
       </div>
-      <img src={profile} alt="" />
     </div>
   );
 };

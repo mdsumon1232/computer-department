@@ -9,7 +9,6 @@ const Teachers = () => {
   const handleAllTeachers = () => {
     navigate("/all/teachers");
   };
-  console.log(teachers);
 
   useEffect(() => {
     fetch("teacher.json")

@@ -7,9 +7,22 @@ import { AuthContext } from "../UserProvider/UserProvider";
 import "./Header.css";
 
 const Header = () => {
-  const { user } = useContext(AuthContext);
-
+  const { user, logOUt } = useContext(AuthContext);
+  const [openProfile, setOpenProfile] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const handleProfileInformation = () => {
+    setOpenProfile(!openProfile);
+  };
+
+  const handleLogOut = () => {
+    logOUt()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const handleNavbar = () => {
     setOpen(!open);
   };
@@ -40,8 +53,9 @@ const Header = () => {
       <div className="user">
         {user ? (
           <img
-            src={user.photoURL ? user.profile : profile}
+            src={profile}
             className="profile"
+            onClick={handleProfileInformation}
           />
         ) : (
           <span>
@@ -56,6 +70,14 @@ const Header = () => {
             <Bars3Icon className="barIcon" />
           )}
         </div>
+      </div>
+      <div
+        className={`profileInformation ${
+          openProfile === true ? "openProfile" : "closeProfile"
+        }`}
+      >
+        <Link>Profile</Link>
+        <Link onClick={handleLogOut}>Log Out</Link>
       </div>
     </header>
   );

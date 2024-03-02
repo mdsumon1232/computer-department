@@ -1,17 +1,14 @@
-import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { sendPasswordResetEmail } from "firebase/auth";
 import { useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import login_img from "../../assets/login-img.png";
-import app from "../../firebase/firebase.config";
 import { AuthContext } from "../UserProvider/UserProvider";
 import "./Login.css";
 
 const Login = () => {
-  const { setUser, login } = useContext(AuthContext);
-
-  const auth = getAuth(app);
+  const { login, auth } = useContext(AuthContext);
 
   const emailRef = useRef();
 
@@ -24,7 +21,6 @@ const Login = () => {
 
     login(email, password)
       .then((result) => {
-        setUser(result.user);
         console.log(result.user);
         toast("Login successfully");
       })

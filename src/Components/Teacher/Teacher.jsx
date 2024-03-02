@@ -1,5 +1,4 @@
 const Teacher = ({ teacher }) => {
-  console.log(teacher);
   const { img, name, designation, education, phone, email, shift } = teacher;
   return (
     <div className="cart">

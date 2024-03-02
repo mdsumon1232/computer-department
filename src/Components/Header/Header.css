@@ -8,6 +8,7 @@
   align-items: center;
   background-color: #0c359e;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav ul {
@@ -53,6 +54,36 @@
   color: #ffffff;
 }
 
+.profileInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0c359e;
+  width: 150px;
+  height: 100px;
+  padding: 10px 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 999;
+}
+
+.profileInformation a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.openProfile {
+  right: 0;
+  transition: right 1s;
+}
+
+.closeProfile {
+  right: -300px;
+  transition: right 1s;
+}
 /* responsive for small device */
 
 @media screen and (max-width: 576px) {
